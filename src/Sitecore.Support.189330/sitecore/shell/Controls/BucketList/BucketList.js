@@ -109,7 +109,7 @@ Sitecore.InitBucketList = function (id, clientId, pageNumber, searchHandlerUrl, 
         var filterString = self.enableSetStartLocation ? self.getOverrideString('%2Blocation=') : self.filter;
         var selectedIdsFilter = self.getSelectedIdsFilter();
 
-        self.sendRequest(self.searchHandlerUrl, 'fromBucketListField=' + savedStr + "&" + filterString.replace(/\+/g, "%2B") + selectedIdsFilter + '&pageNumber=' + self.currentPage + self.databaseUrlParameter + '&scLanguage=' + self.contentLanguage, multilist);
+        self.sendRequest(self.searchHandlerUrl, 'fromBucketListField=' + savedStr + "&" + filterString.replace(/\+/g, "%2B") + selectedIdsFilter + '&pageNumber=' + self.currentPage + self.databaseUrlParameter + '&_language=' + self.contentLanguage, multilist);
     };
 
     // Replaces overrideKey value in filter by value from ovverrideInput
